@@ -1,8 +1,8 @@
 # Random Weather
 
-Small app to present the weather of a random location. The app is consuming the [OpenWeather API]() to get the weather of a random location by passing valid coordinates. Valid latitudes are between -90 and 90 degrees and valid longitudes are between -180 and 180. The app assumes 4 decimals as the API suggests. The app has been built using Clean Architecture divided by modules, Repository pattern to access the data and MVVM as the design pattern in the presentation. Some other Architecture Components has been presented.
+Small app to present the weather of a random location. The app is consuming the [OpenWeather API](https://openweathermap.org/) to get the weather of a random location by passing valid coordinates. Valid latitudes are between -90 and 90 degrees and valid longitudes are between -180 and 180 degrees. The app assumes 4 decimals as the API suggests. The app has been built using Clean Architecture divided by modules, Repository pattern to access the data and MVVM as the design pattern in the presentation. Some other Architecture Components has been presented.
 
-The app is compatible since API 21, that means over 94.1 devices.
+The app is compatible since API 21, that means over 94.1% devices.
 
 ## Architecture
 Clean Architecture divided into three layers, each one in a diferent module
@@ -19,6 +19,7 @@ Libraries used in the whole application are:
 
 - [Jetpack](https://developer.android.com/jetpack)🚀
   - [Viewmodel](https://developer.android.com/topic/libraries/architecture/viewmodel)
+  - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata)
   - [View Binding](https://developer.android.com/topic/libraries/view-binding)
   - [Navigation](https://developer.android.com/guide/navigation/navigation-getting-started)
 - [Retrofit](https://square.github.io/retrofit/)
