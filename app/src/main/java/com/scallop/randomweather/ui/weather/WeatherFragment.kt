@@ -90,7 +90,7 @@ class WeatherFragment : BaseFragment() {
                     ?.format(weather.coord.lat.toString(), weather.coord.lon.toString())
                 temperatureValue.text = context?.getString(R.string.temperature_placeholder)
                     ?.format(Utils.getCelsiusFromKelvin(weather.main.temp))
-                humidityValue.text =context?.getString(R.string.humidity_placeholder)
+                humidityValue.text = context?.getString(R.string.humidity_placeholder)
                     ?.format(weather.main.humidity)
             }
         }

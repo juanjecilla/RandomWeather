@@ -1,6 +1,5 @@
 package com.scallop.randomweather.data.repository
 
-import com.scallop.randomweather.data.entitites.WeatherData
 import com.scallop.randomweather.domain.entities.WeatherEntity
 import kotlinx.coroutines.flow.Flow
 
