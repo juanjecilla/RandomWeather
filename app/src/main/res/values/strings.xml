@@ -1,15 +1,12 @@
 <resources>
     <string name="app_name">Random Weather</string>
-    <string name="base_url_service">https://itunes.apple.com/</string>
     <string name="next_label">Next</string>
-    <string name="search_hint">The Rolling Stones</string>
-    <string name="search_label">Artist or group</string>
-    <string name="share_label">Share</string>
-    <string name="play_label">Play song preview</string>
-    <string name="search_video_label">Search video preview</string>
-    <string name="fav_description">Save favourite</string>
-    <string name="empty_search">Sorry, we need something to search...</string>
-    <string name="empty_label">No results!</string>
-    <string name="video_not_found">Sorry... There is no video available</string>
     <string name="title_label">Showing weather at location:</string>
+    <string name="latlon_placeholder">Lat: %s --- Lon: %s</string>
+    <string name="weather_icon">Weather icon</string>
+    <string name="humidity_label">Humidity:</string>
+    <string name="error_weather">Error requesting weather</string>
+    <string name="temperature_placeholder">%.1f ºC</string>
+    <string name="humidity_placeholder">%d %</string>
+    <string name="name_not_found">City not available</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.scallop.randomweather.ui.artists
+package com.scallop.randomweather.ui.weather
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -34,13 +34,17 @@ class WeatherViewModel(
         params["lat"] = Utils.getRandomLatitude()
         params["lon"] = Utils.getRandomLongitude()
 
-        viewModelScope.launch {
-            val results = withContext(Dispatchers.IO) {
-                mUseCase(params)
+        try {
+            viewModelScope.launch {
+                val results = withContext(Dispatchers.IO) {
+                    mUseCase(params)
+                }
+                results.map {
+                    _data.value = Data(Status.SUCCESSFUL, mMapper.mapTo(it))
+                }.collect()
             }
-            results.map {
-                _data.value = Data(Status.SUCCESSFUL, mMapper.mapTo(it))
-            }.collect()
+        } catch (e: Exception) {
+            _data.value = Data(Status.ERROR)
         }
     }
 }

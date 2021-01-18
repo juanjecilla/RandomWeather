@@ -2,13 +2,13 @@ package com.scallop.randomweather.di
 
 import com.scallop.randomweather.data.api.OpenWeatherApi
 import com.scallop.randomweather.data.mappers.WeatherDataEntityMapper
+import com.scallop.randomweather.data.repository.RemoteDataSource
 import com.scallop.randomweather.data.repository.WeatherRemoteImpl
 import com.scallop.randomweather.data.repository.WeatherRepositoryImpl
-import com.scallop.randomweather.data.repository.RemoteDataSource
 import com.scallop.randomweather.domain.repositories.WeatherRepository
 import com.scallop.randomweather.domain.usecases.GetWeatherUseCase
 import com.scallop.randomweather.mappers.WeatherMapper
-import com.scallop.randomweather.ui.artists.WeatherViewModel
+import com.scallop.randomweather.ui.weather.WeatherViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
