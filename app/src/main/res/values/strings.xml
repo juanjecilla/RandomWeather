@@ -7,6 +7,6 @@
     <string name="humidity_label">Humidity:</string>
     <string name="error_weather">Error requesting weather</string>
     <string name="temperature_placeholder">%.1f ºC</string>
-    <string name="humidity_placeholder">%d %</string>
+    <string name="humidity_placeholder">%d %%</string>
     <string name="name_not_found">City not available</string>
 </resources>

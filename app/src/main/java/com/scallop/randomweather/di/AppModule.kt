@@ -5,11 +5,15 @@ import com.scallop.randomweather.data.mappers.WeatherDataEntityMapper
 import com.scallop.randomweather.data.repository.RemoteDataSource
 import com.scallop.randomweather.data.repository.WeatherRemoteImpl
 import com.scallop.randomweather.data.repository.WeatherRepositoryImpl
+import com.scallop.randomweather.domain.common.BaseUseCase
+import com.scallop.randomweather.domain.entities.WeatherEntity
 import com.scallop.randomweather.domain.repositories.WeatherRepository
 import com.scallop.randomweather.domain.usecases.GetWeatherUseCase
 import com.scallop.randomweather.mappers.WeatherMapper
 import com.scallop.randomweather.ui.weather.WeatherViewModel
+import kotlinx.coroutines.flow.Flow
 import org.koin.androidx.viewmodel.dsl.viewModel
+import org.koin.core.qualifier.named
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
@@ -33,7 +37,7 @@ val mNetworkModules = module {
 }
 
 val mViewModels = module {
-    viewModel { WeatherViewModel(get(), WeatherMapper()) }
+    viewModel { WeatherViewModel(get(GetWeatherUseCase::class) as BaseUseCase<HashMap<String, Double>, Flow<WeatherEntity>>, WeatherMapper()) }
 }
 
 
