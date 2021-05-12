@@ -1,4 +1,4 @@
-package com.scallop.randomweather
+package com.scallop.randomweather.utils
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

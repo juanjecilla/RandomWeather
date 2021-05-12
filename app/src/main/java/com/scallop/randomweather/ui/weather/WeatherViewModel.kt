@@ -11,6 +11,7 @@ import com.scallop.randomweather.entities.Status
 import com.scallop.randomweather.entities.Weather
 import com.scallop.randomweather.mappers.WeatherMapper
 import com.scallop.randomweather.ui.commons.Utils
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.collect
@@ -20,7 +21,8 @@ import kotlinx.coroutines.withContext
 
 class WeatherViewModel(
     private val mUseCase: BaseUseCase<HashMap<String, Double>, Flow<WeatherEntity>>,
-    private val mMapper: WeatherMapper
+    private val mMapper: WeatherMapper,
+    private val dispatcher: CoroutineDispatcher = Dispatchers.IO
 ) : ViewModel() {
 
     private val _data = MutableLiveData<Data<Weather>>()

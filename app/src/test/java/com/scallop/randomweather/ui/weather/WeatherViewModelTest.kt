@@ -2,7 +2,7 @@ package com.scallop.randomweather.ui.weather
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.scallop.randomweather.CoroutineTestRule
+import com.scallop.randomweather.utils.CoroutineTestRule
 import com.scallop.randomweather.entities.Data
 import com.scallop.randomweather.entities.Status
 import com.scallop.randomweather.entities.Weather
@@ -39,7 +39,7 @@ class WeatherViewModelTest {
     @Before
     fun setup() {
         MockitoAnnotations.initMocks(this)
-        mViewModel = WeatherViewModel(FakeGetWeatherUseCase(Status.SUCCESSFUL), WeatherMapper())
+        mViewModel = WeatherViewModel(FakeGetWeatherUseCase(Status.SUCCESSFUL), WeatherMapper(), coroutineTestRule.dispatcher)
         mViewModel.data.observeForever(mObserver)
         mMapper = WeatherMapper()
     }
